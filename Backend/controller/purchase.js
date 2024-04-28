@@ -6,7 +6,7 @@ const addPurchase = (req, res) => {
   const addPurchaseDetails = new Purchase({
     userID: req.body.userID,
     ProductID: req.body.productID,
-    QuantityPurchased: req.body.quantityPurchased,
+    QuantityPurchased: parseInt(req.body.quantityPurchased),
     PurchaseDate: req.body.purchaseDate,
     TotalPurchaseAmount: req.body.totalPurchaseAmount,
   });
@@ -14,7 +14,7 @@ const addPurchase = (req, res) => {
   addPurchaseDetails
     .save()
     .then((result) => {
-      purchaseStock(req.body.productID, req.body.quantityPurchased);
+      purchaseStock(req.body.productID, parseInt(req.body.quantityPurchased));
       res.status(200).send(result);
     })
     .catch((err) => {

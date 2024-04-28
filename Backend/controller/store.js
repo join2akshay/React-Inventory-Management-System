@@ -2,14 +2,14 @@ const Store = require("../models/store");
 
 // Add Store
 const addStore = async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
   const addStore = await new Store({
     userID : req.body.userId,
     name: req.body.name,
     category: req.body.category,
     address: req.body.address,
     city: req.body.city,
-    image: req.body.image
+    // image: req.body.image
   });
 
   addStore.save().then((result) => {

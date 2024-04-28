@@ -1,8 +1,9 @@
 const Sales = require("../models/sales");
 const soldStock = require("../controller/soldStock");
+const Product = require("../models/Product");
 
 // Add Sales
-const addSales = (req, res) => {
+const addSales = async(req, res) => {
   const addSale = new Sales({
     userID: req.body.userID,
     ProductID: req.body.productID,
@@ -12,15 +13,26 @@ const addSales = (req, res) => {
     TotalSaleAmount: req.body.totalSaleAmount,
   });
 
-  addSale
-    .save()
-    .then((result) => {
-      soldStock(req.body.productID, req.body.stockSold);
-      res.status(200).send(result);
-    })
-    .catch((err) => {
-      res.status(402).send(err);
-    });
+  const stockQtn=await Product.findById(req.body.productID)
+  // console.log(stockQtn)
+
+  if(req.body.stockSold>stockQtn.stock){
+    // res.st('Out of stock!!')
+    res.status(402).json({error:'Out of stock!!',status:false});
+  }else{
+
+    addSale
+      .save()
+      .then((result) => {
+        soldStock(req.body.productID, req.body.stockSold);
+        result.status=true
+        res.status(200).send(result);
+      })
+      .catch((err) => {
+        res.status(402).send(err);
+      });
+  }
+
 };
 
 // Get All Sales Data
