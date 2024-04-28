@@ -71,8 +71,8 @@ const App = () => {
               </ProtectedWrapper>
             }
           >
-            <Route index element={<Dashboard />} />
-            <Route path="/inventory" element={<Inventory />} />
+            {/* <Route index element={<Dashboard />} /> */}
+            <Route index path="/inventory" element={<Inventory />} />
             <Route path="/purchase-details" element={<PurchaseDetails />} />
             <Route path="/sales" element={<Sales />} />
             <Route path="/manage-store" element={<Store />} />
