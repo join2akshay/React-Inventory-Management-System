@@ -60,7 +60,7 @@ export default function Header() {
                             <span className="sr-only">Open user menu</span>
                             <img
                               className="h-8 w-8 rounded-full"
-                              src={localStorageData.imageUrl}
+                              src='https://avatars.dicebear.com/v2/male/f8dec535bdef4b949034cc816cf603b2.svg'
                               alt="profile"
                             />
                           </Menu.Button>

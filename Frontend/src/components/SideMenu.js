@@ -8,7 +8,7 @@ function SideMenu() {
     <div className="h-full flex-col justify-between  bg-white hidden lg:flex ">
       <div className="px-4 py-6">
         <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
-          <Link
+          {/* <Link
             to="/"
             className="flex items-center gap-2 rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
           >
@@ -17,7 +17,7 @@ function SideMenu() {
               src={require("../assets/dashboard-icon.png")}
             />
             <span className="text-sm font-medium"> Dashboard </span>
-          </Link>
+          </Link> */}
 
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
@@ -71,7 +71,7 @@ function SideMenu() {
         <div className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
           <img
             alt="Profile"
-            src={localStorageData.imageUrl}
+            src='https://avatars.dicebear.com/v2/male/f8dec535bdef4b949034cc816cf603b2.svg'
             className="h-10 w-10 rounded-full object-cover"
           />
 

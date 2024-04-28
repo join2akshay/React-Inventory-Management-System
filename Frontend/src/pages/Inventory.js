@@ -91,7 +91,7 @@ function Inventory() {
       <div className=" flex flex-col gap-5 w-11/12">
         <div className="bg-white rounded p-3">
           <span className="font-semibold px-4">Overall Inventory</span>
-          <div className=" flex flex-col md:flex-row justify-center items-center  ">
+          {/* <div className=" flex flex-col md:flex-row justify-center items-center  ">
             <div className="flex flex-col p-10  w-full  md:w-3/12  ">
               <span className="font-semibold text-blue-600 text-base">
                 Total Products
@@ -170,7 +170,7 @@ function Inventory() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {showProductModal && (

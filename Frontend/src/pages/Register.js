@@ -123,7 +123,7 @@ function Register() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div>
+              {/* <div>
                 <input
                   name="phoneNumber"
                   type="number"
@@ -134,8 +134,8 @@ function Register() {
                   value={form.phoneNumber}
                   onChange={handleInputChange}
                 />
-              </div>
-              <UploadImage uploadImage={uploadImage} />
+              </div> */}
+              {/* <UploadImage uploadImage={uploadImage} /> */}
             </div>
 
             <div className="flex items-center justify-between">
@@ -156,13 +156,13 @@ function Register() {
                 </label>
               </div>
 
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <span
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Forgot your password?
                 </span>
-              </div>
+              </div> */}
             </div>
 
             <div>

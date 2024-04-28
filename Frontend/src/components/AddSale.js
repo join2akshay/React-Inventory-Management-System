@@ -35,12 +35,13 @@ export default function AddSale({
       },
       body: JSON.stringify(sale),
     })
-      .then((result) => {
-        alert("Sale ADDED");
-        handlePageUpdate();
-        addSaleModalSetting();
-      })
-      .catch((err) => console.log(err));
+      .then((result) =>result.json()
+      ).then((data)=>{if(data.error=='Out of stock!!'){
+        alert(data.error); 
+      }
+         handlePageUpdate();
+      addSaleModalSetting();})
+      .catch((err) => console.log(err.response.statusText ));
   };
 
   return (

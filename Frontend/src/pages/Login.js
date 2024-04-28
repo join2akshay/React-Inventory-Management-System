@@ -22,10 +22,10 @@ function Login() {
       fetch("http://localhost:4000/api/login")
         .then((response) => response.json())
         .then((data) => {
-          alert("Successfully Login");
+          // alert("Successfully Login");
           localStorage.setItem("user", JSON.stringify(data));
           authContext.signin(data._id, () => {
-            navigate("/");
+            navigate("/inventory");
           });
         })
         .catch((err) => {
@@ -79,14 +79,14 @@ function Login() {
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
               Signin to your account
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
+            {/* <p className="mt-2 text-center text-sm text-gray-600">
               Or
               <span
                 className="font-medium text-indigo-600 hover:text-indigo-500"
               >
                 start your 14-day free trial
               </span>
-            </p>
+            </p> */}
           </div>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             {/* <input type="hidden" name="remember" defaultValue="true" /> */}
@@ -141,13 +141,13 @@ function Login() {
                 </label>
               </div>
 
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <span
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Forgot your password?
                 </span>
-              </div>
+              </div> */}
             </div>
 
             <div>

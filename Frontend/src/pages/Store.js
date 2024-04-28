@@ -45,11 +45,11 @@ function Store() {
               key={element._id}
             >
               <div>
-                <img
+                {/* <img
                   alt="store"
                   className="h-60 w-full object-cover"
                   src={element.image}
-                />
+                /> */}
               </div>
               <div className="flex flex-col gap-3 justify-between items-start">
                 <span className="font-bold">{element.name}</span>
