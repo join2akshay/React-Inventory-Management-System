@@ -12,5 +12,5 @@ app.get("/get/:userID/totalpurchaseamount", purchase.getTotalPurchaseAmount);
 
 module.exports = app;
 
-// http://localhost:4000/api/purchase/add POST
-// http://localhost:4000/api/purchase/get GET
+// https://abundant-stellar-peach.glitch.me/api/purchase/add POST
+// https://abundant-stellar-peach.glitch.me/api/purchase/get GET
