@@ -84,6 +84,10 @@ app.get("/testget", async (req,res)=>{
   res.json(result)
 
 })
+app.get("/ok", async (req,res)=>{
+  res.send('i m up')
+
+})
 
 // Here we are listening to the server
 app.listen(PORT, () => {
