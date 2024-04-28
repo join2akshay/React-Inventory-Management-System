@@ -12,6 +12,7 @@ const Product = require("./models/Product");
 main();
 const app = express();
 const PORT = process.env.PORT || 4000;
+app.setTimeout(500000);
 app.use(express.json());
 app.use(cors());
 
