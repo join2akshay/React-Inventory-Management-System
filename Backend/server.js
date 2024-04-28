@@ -9,7 +9,7 @@ const cors = require("cors");
 // const Product = require("./models/Product");
 
 
-// const app = express();
+const app = express();
 const PORT = process.env.PORT || 4000;
 // main();
 app.use(express.json());
